@@ -1,0 +1,5 @@
+streamlit
+langchain_groq
+groq
+PyPDF2
+faiss-cpu
