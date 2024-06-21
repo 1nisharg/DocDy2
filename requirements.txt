@@ -5,3 +5,4 @@ langchain_groq
 groq
 PyPDF2
 faiss-cpu
+sentence-transformers
