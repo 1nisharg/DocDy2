@@ -97,9 +97,8 @@ def main():
     Now you can convert your PDFs between international and regional languages, and vice versa, with just two clicks! Experience seamless language conversion and enhance your document accessibility today.
     """)
     
-    if st.button("Experience LangVault", "https://pdf-translator--openrag.streamlit.app/"):
-        st.write("Redirecting to LangVault...")
-        st.experimental_rerun()
+    st.link_button("Experience LangVault", "https://pdf-translator--openrag.streamlit.app/"):
+        
 
 if __name__ == "__main__":
     main()
