@@ -85,7 +85,7 @@ def main():
                 get_vector_store(text_chunks)
                 st.success("Done")
                 st.write("")
-                st.title("LangVault 📑")
+                st.write("LangVault 📑")
                 st.write("Major update for OpenRAG users")
         st.sidebar.markdown("All OpenRAG users, we are happy to let you all know about the latest feature added to DocDynamo -- Langvault 📑")
         st.sidebar.markdown("Now you can convert your PDFs from any international to regional language and also from regional to international within 2clicks. Link on the button below and experience it.")
