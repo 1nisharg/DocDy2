@@ -85,11 +85,21 @@ def main():
                 get_vector_store(text_chunks)
                 st.success("Done")
                 st.write("")
-                st.write("LangVault 📑")
-                st.write("Major update for OpenRAG users")
-        st.sidebar.markdown("All OpenRAG users, we are happy to let you all know about the latest feature added to DocDynamo -- Langvault 📑")
-        st.sidebar.markdown("Now you can convert your PDFs from any international to regional language and also from regional to international within 2clicks. Link on the button below and experience it.")
-        st.link_button("LangVault", "https://pdf-translator--openrag.streamlit.app/")
+                st.write("### LangVault 📑")
+            st.write("**Major update for OpenRAG users**")
+
+    st.markdown("---")
+    
+    st.markdown("### Exciting Update for OpenRAG Users!")
+    st.markdown("""
+    We are thrilled to introduce the latest feature added to DocDynamo: **Langvault** 📚✨.
+    
+    Now you can convert your PDFs between international and regional languages, and vice versa, with just two clicks! Experience seamless language conversion and enhance your document accessibility today.
+    """)
+    
+    if st.button("Experience LangVault"):
+        st.write("Redirecting to LangVault...")
+        st.experimental_rerun()
 
 if __name__ == "__main__":
     main()
