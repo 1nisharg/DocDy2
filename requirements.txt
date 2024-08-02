@@ -6,4 +6,7 @@ groq
 PyPDF2
 faiss-cpu
 sentence-transformers
-bs4
+beautifulsoup4
+youtube-transcript-api
+spacy
+sentence-transformers
