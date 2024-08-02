@@ -11,11 +11,21 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from youtube_transcript_api import YouTubeTranscriptApi
+import spacy
+from spacy.cli import download
 
 # Ensure correct version of protobuf is installed
 subprocess.run(["pip", "install", "protobuf==3.20.3"])
 
-import spacy
+def ensure_spacy_model(model_name="en_core_web_sm"):
+    try:
+        spacy.load(model_name)
+    except OSError:
+        download(model_name)
+
+# Ensure the spaCy model is installed
+ensure_spacy_model()
+
 nlp = spacy.load("en_core_web_sm")
 
 GROQ_API_KEY = "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"
