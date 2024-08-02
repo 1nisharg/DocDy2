@@ -8,6 +8,6 @@ faiss-cpu
 sentence-transformers
 beautifulsoup4
 youtube-transcript-api
-spacy==3.5.2
+spacy==3.7.1
 sentence-transformers
 
