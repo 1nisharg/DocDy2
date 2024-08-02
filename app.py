@@ -19,7 +19,22 @@ subprocess.run(["pip", "install", "protobuf==3.20.3"])
 GROQ_API_KEY = "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"
 
 # Load the NLP model
+import subprocess
+import importlib
+
+def download_spacy_model(model_name):
+    subprocess.run(["python", "-m", "spacy", "download", model_name])
+
+try:
+    spacy_model = importlib.util.find_spec("en_core_web_sm")
+    if spacy_model is None:
+        download_spacy_model("en_core_web_sm")
+except ImportError:
+    download_spacy_model("en_core_web_sm")
+
+import spacy
 nlp = spacy.load('en_core_web_sm')
+
 
 def get_pdf_text(pdf_docs):
     text = ""
