@@ -15,6 +15,7 @@ import spacy
 
 # Ensure correct version of protobuf is installed
 subprocess.run(["pip", "install", "protobuf==3.20.3"])
+subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
 
 GROQ_API_KEY = "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"
 
