@@ -11,18 +11,22 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from youtube_transcript_api import YouTubeTranscriptApi
-import spacy
 
 # Ensure correct version of protobuf is installed
 subprocess.run(["pip", "install", "protobuf==3.20.3"])
-subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+subprocess.run(["pip", "install", "spacy==3.5.2"])
+
+# Ensure spacy model is downloaded
+try:
+    import spacy
+    spacy.cli.download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+except (ImportError, OSError) as e:
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    import spacy
+    nlp = spacy.load("en_core_web_sm")
 
 GROQ_API_KEY = "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"
-
-
-import spacy
-nlp = spacy.load('en_core_web_sm')
-
 
 def get_pdf_text(pdf_docs):
     text = ""
